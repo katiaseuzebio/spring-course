@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- *
+ * @author Katia Santos Euzebio
  */
 @Entity
 public class Book {
