@@ -1,6 +1,7 @@
 package guru.springframework.spring5webapp.model;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -23,6 +24,17 @@ public class Book {
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors;
+
+    public Book(String title, String isbn, String publisher) {
+        this.title = title;
+        this.isbn = isbn;
+        this.publisher = publisher;
+        this.authors = new HashSet<>();
+    }
+
+    public void addAuthor(Author author) {
+        this.authors.add(author);
+    }
 
     @Override
     public boolean equals(Object o) {
