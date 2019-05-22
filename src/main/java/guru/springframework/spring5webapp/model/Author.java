@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * Entity class for Author
  *
- * @author Katia Santos Euzebio
+ * @author Katia
  */
 @Entity
 public class Author {
