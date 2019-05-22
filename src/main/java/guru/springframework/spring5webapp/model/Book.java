@@ -27,11 +27,29 @@ public class Book {
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors;
 
+    /**
+     * Default Constructor
+     */
+    public Book() {
+    }
+
     public Book(String title, String isbn, Publisher publisher) {
         this.title = title;
         this.isbn = isbn;
         this.publisher = publisher;
         this.authors = new HashSet<>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
     }
 
     public void addAuthor(Author author) {
