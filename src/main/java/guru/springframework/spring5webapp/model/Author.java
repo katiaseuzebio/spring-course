@@ -34,6 +34,18 @@ public class Author {
         this.books = new HashSet<>();
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
     public void addBook(Book book) {
         this.books.add(book);
     }
